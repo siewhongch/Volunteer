@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, MapPin, Sparkles, BookOpen, Clock, HeartHandshake, ShieldCheck } from 'lucide-react';
+import { Search, MapPin, Sparkles, BookOpen, Clock, HeartHandshake, ShieldCheck, Compass } from 'lucide-react';
 import { Region } from '../types';
 
 interface HeroProps {
@@ -63,6 +63,13 @@ export const Hero: React.FC<HeroProps> = ({
               >
                 <BookOpen className="w-4 h-4 text-amber-600" />
                 <span>Free Tuition (Kids 7–12)</span>
+              </button>
+              <button
+                onClick={() => onExploreClick('singapore-map')}
+                className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm rounded-xl shadow-xs transition-colors cursor-pointer flex items-center gap-2"
+              >
+                <Compass className="w-4 h-4 text-amber-400" />
+                <span>OneMap Explorer</span>
               </button>
               <button
                 onClick={onOpenPostModal}

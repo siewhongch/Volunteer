@@ -11,6 +11,7 @@ import { StudentVIASection } from './components/StudentVIASection';
 import { FreeTuitionSection } from './components/FreeTuitionSection';
 import { HoursTrackerSection } from './components/HoursTrackerSection';
 import { GuidelinesSection } from './components/GuidelinesSection';
+import { SingaporeOneMap } from './components/SingaporeOneMap';
 import { Footer } from './components/Footer';
 import { PostModal } from './components/PostModal';
 import { 
@@ -250,6 +251,20 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
+        {/* Interactive Singapore OneMap Explorer (Linked to Region Search) */}
+        <div id="singapore-map" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 scroll-mt-20">
+          <SingaporeOneMap
+            selectedRegion={selectedRegion}
+            onSelectRegion={(reg) => {
+              setSelectedRegion(reg);
+              showToast(`Focused on ${reg} Region. Opportunities filtered below!`);
+            }}
+            opportunities={opportunities}
+            projects={projects}
+            requests={requests}
+          />
+        </div>
+
         {/* Section 1: Charity & NGO Opportunities */}
         <OpportunitiesSection
           opportunities={opportunities}

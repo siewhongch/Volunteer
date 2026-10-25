@@ -17,11 +17,11 @@ export const Header: React.FC<HeaderProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
+    { id: 'singapore-map', label: 'OneMap Explorer' },
     { id: 'opportunities', label: 'Charity Drives' },
     { id: 'via-projects', label: 'Student VIA' },
-    { id: 'free-tuition', label: 'Free Tuition (Kids 7-12)' },
+    { id: 'free-tuition', label: 'Free Tuition' },
     { id: 'tracker', label: 'Hours Tracker' },
-    { id: 'guidelines', label: 'VIA Info & Safety' },
   ];
 
   const handleNavClick = (id: string) => {
