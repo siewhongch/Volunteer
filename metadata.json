@@ -1,0 +1,6 @@
+{
+  "name": "High School Volunteer",
+  "description": "Connecting Singapore high school students with local charity initiatives, student-led VIA projects, free tuition for primary kids, and volunteer hour tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
